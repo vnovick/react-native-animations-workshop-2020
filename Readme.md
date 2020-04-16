@@ -117,7 +117,7 @@ In this exercise we will recreate Twitter like header
 Exercise 5 - Interpolation with scroll
 </summary>
 
-- In a twitter like example make sure to change the opacity of the subheader only when it appears on top of the
+- In a twitter like example make sure to change the opacity of the subheader only when it appears on top of the header
 - Make sure to scroll the avatar image and the name under the header
 </details>
 
