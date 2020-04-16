@@ -78,11 +78,28 @@ Exercise 2
 </details>
 
 
+In this exercise we will experiment with interpolation and various Animated functions
+
+<details>
+
+
+<summary>
+Exercise 3 -
+</summary>
+
+- Create a new screen.
+- Create three items on the screen
+- Create a sequence animation to change items properties
+- Change 3 different types of properties
+
+</details>
+
+
 In next exercise we will use onLayout and native event to get screen measurements and change things according to them
 
 <details>
 <summary>
-Exercise 3
+Exercise 4
 </summary>
 
 - Move the green box from the first example to the bottom of the screen using screen measurements
@@ -90,22 +107,6 @@ Exercise 3
 Hint:
 - Use `onLayout` function to measure screen size.
 - use `useWindowDimensions` to get window dimensions
-
-</details>
-
-In this exercise we will experiment with interpolation and various Animated functions
-
-<details>
-
-
-<summary>
-Exercise 4 -
-</summary>
-
-- Create a new screen.
-- Create three items on the screen
-- Create a sequence animation to change items properties
-- Change 3 different types of properties
 
 </details>
 
