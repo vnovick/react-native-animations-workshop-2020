@@ -14,7 +14,7 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="MeasurementsScreen">
+      <Drawer.Navigator initialRouteName="Gestures">
         <Drawer.Screen name="BasicExample" component={BasicAnimationExample} />
         <Drawer.Screen name="Basics" component={HomeScreen} />
         <Drawer.Screen name="Interpolation" component={InterpolationScreen} />
