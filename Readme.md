@@ -58,10 +58,10 @@ Getting into the basics of `Animated`
     <summary>
         Exercise 1
     </summary>
+
     - Start a new project, 
     - Create a new screen with a green box and position it at the top of the view.
     - Move box to the middle of the screen using `Animated.Value` and timing function
-    - Do the same with `Animated.decay` function.
     - Create a sequence of several animations. Move the box to the right and then down.
 </details>
 
@@ -84,6 +84,7 @@ In next exercise we will use onLayout and native event to get screen measurement
 <summary>
 Exercise 3
 </summary>
+
 - Move the green box from the first example to the bottom of the screen using screen measurements
 
 Hint:
