@@ -118,7 +118,7 @@ Exercise 5 - Interpolation with scroll
 </summary>
 
 - In a previous project create a new screen
-- Recreate Twitter like header example on profile by implementing what was learnt in the class
+- In a twitter like example make sure to change the opacity of the subheader only when it appears on top of the header
 
 </details>
 
