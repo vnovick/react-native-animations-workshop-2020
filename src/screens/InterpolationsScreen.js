@@ -27,5 +27,111 @@ const styles = StyleSheet.create({
 });
 
 export default function InterpolationScreen() {
-  return <SafeAreaView style={styles.container} />;
+  const animatedValue = useRef(new Animated.Value(1)).current;
+
+  const startAnimation = () => {
+    Animated.sequence([
+      Animated.timing(animatedValue, {
+        toValue: 0,
+        duration: 1000,
+        useNativeDriver: false,
+      }),
+      Animated.timing(animatedValue, {
+        toValue: 1000,
+        duration: 3000,
+        useNativeDriver: false,
+      }),
+      Animated.timing(animatedValue, {
+        toValue: 1,
+        duration: 3000,
+        useNativeDriver: false,
+      }),
+    ]).start();
+  };
+
+  const centerCyrcleColorAnimation = {
+    backgroundColor: animatedValue.interpolate({
+      inputRange: [0, 1, 50, 100],
+      outputRange: ['#FF9900', 'red', 'blue', 'yellow'],
+    }),
+  };
+
+  const centerCyrcleOpacityAnimation = {
+    opacity: animatedValue.interpolate({
+      inputRange: [0, 1],
+      outputRange: [0, 1],
+    }),
+  };
+
+  const transformStyle = {
+    transform: [
+      {
+        translateX: animatedValue.interpolate({
+          inputRange: [0, 1, 100],
+          outputRange: [100, 0, -100],
+          extrapolate: 'clamp',
+        }),
+      },
+      {
+        translateY: animatedValue.interpolate({
+          inputRange: [0, 1, 100, 1000],
+          outputRange: [0, 0, -100, -400],
+          extrapolate: 'clamp',
+        }),
+      },
+      {
+        scale: animatedValue.interpolate({
+          inputRange: [0, 1, 50, 100, 1000],
+          outputRange: [1, 1, 10, 1, 3],
+          extrapolate: 'clamp',
+        }),
+      },
+    ],
+  };
+
+  const transformShape = {
+    transform: [
+      {
+        skewX: animatedValue.interpolate({
+          inputRange: [0, 1, 100, 1000],
+          outputRange: ['45deg', '0deg', '-45deg', '120deg'],
+        }),
+      },
+    ],
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text>
+          <Text>Interpolation and parallel Animations</Text>
+        </Text>
+        <View
+          style={[
+            styles.container,
+            {
+              width: '100%',
+              flexDirection: 'row',
+              justifyContent: 'space-around',
+            },
+          ]}>
+          <TouchableOpacity onPress={startAnimation}>
+            <Animated.View style={[styles.circle, transformShape]} />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={startAnimation}>
+            <Animated.View
+              style={[
+                styles.circle,
+                centerCyrcleOpacityAnimation,
+                centerCyrcleColorAnimation,
+              ]}
+            />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={startAnimation}>
+            <Animated.View style={[styles.circle, transformStyle]} />
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
 }
