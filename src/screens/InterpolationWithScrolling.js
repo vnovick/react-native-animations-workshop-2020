@@ -55,11 +55,7 @@ export default function HomeScreen() {
     ],
     extrapolate: 'clamp',
   });
-  const headerZindex = scrollY.interpolate({
-    inputRange: [0, HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT, 120],
-    outputRange: [0, 0, 1000],
-    extrapolate: 'clamp',
-  });
+  const headerZindex = 0;
 
   const headerTitleBottom = scrollY.interpolate({
     inputRange: [

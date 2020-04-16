@@ -8,12 +8,13 @@ import InterpolationScreen from './src/screens/InterpolationsScreen';
 import InterpolationWithScrolling from './src/screens/InterpolationWithScrolling';
 import GestureScreen from './src/screens/GesturesScreen';
 import BasicAnimationExample from './src/screens/BasicAnimationExample';
+import ReanimatedGestures from './src/screens/ReanimatedGestures';
 const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="BasicExample">
+      <Drawer.Navigator initialRouteName="MeasurementsScreen">
         <Drawer.Screen name="BasicExample" component={BasicAnimationExample} />
         <Drawer.Screen name="Basics" component={HomeScreen} />
         <Drawer.Screen name="Interpolation" component={InterpolationScreen} />
@@ -26,6 +27,10 @@ export default function App() {
           component={InterpolationWithScrolling}
         />
         <Drawer.Screen name="Gestures" component={GestureScreen} />
+        <Drawer.Screen
+          name="ReanimatedGestures"
+          component={ReanimatedGestures}
+        />
       </Drawer.Navigator>
     </NavigationContainer>
   );

@@ -117,9 +117,8 @@ In this exercise we will recreate Twitter like header
 Exercise 5 - Interpolation with scroll
 </summary>
 
-- In a previous project create a new screen
-- In a twitter like example make sure to change the opacity of the subheader only when it appears on top of the header
-
+- In a twitter like example make sure to change the opacity of the subheader only when it appears on top of the
+- Make sure to scroll the avatar image and the name under the header
 </details>
 
 In next exercise we will put all together and create Gestures animations by creating Tinder like experience with swipeable cards.
